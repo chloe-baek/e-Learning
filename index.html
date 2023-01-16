@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Group3</title>
+</head>
+
+<body>
+    <header>
+        <p id="language">
+            <span data-lang="now_sys_lang">[now-sys-lang]</span>
+            <span id="locale"></span>
+        </p>
+    </header>
+    <main>
+        <div id="passport">
+
+            <h2 id="title" data-lang="title">[title]</h2>
+            <div id="passport-form">
+
+                <form id="login-form" class="hidden">
+                    <input type="text" placeholder="Insert Your Name" required maxlength="15">
+                    <input type="submit" value="Save">
+                </form>
+
+
+                <h2 id="greeting" class="hidden"></h2>
+
+                <input type="submit" value="Change" id="clearStorage" class="hidden">
+            </div>
+
+            <img src="images/passport.svg" alt="" width="70%" height="auto" id="mainpp">
+            <a href="learn-korean/english.php">
+                <img src="images/ticket-to-ko.svg" alt="" width="90%" height="auto" id="to-korea">
+            </a>
+            <a href="learn-english/korean.php">
+                <img src="images/ticket-to-ca.svg" alt="" width="90%" height="auto" id="to-canada">
+            </a>
+
+        </div>
+
+    </main>
+    <footer>
+        <p>Copyright &copy
+            <script>document.write(new Date().getFullYear()) </script> by Group3. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/greeting.js" defer></script>
+</body>
+
+</html>

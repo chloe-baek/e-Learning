@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(../fonts/OTF/NanumSquareNeoOTF-bRg.otf) format('opentype');
+}
+
+:root {
+    --color-bg: #EADCCB;
+    --color-black: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 80ch;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+}
+
+[lang='en'] {
+    font-family: 'Nunito', sans-serif;
+}
+
+[lang='ko'] {
+    font-family: 'NanumSquareNeo', sans-serif;
+}
+
+header {
+    padding: 1.5rem;
+}
+
+#title {
+    font-size: 2rem;
+}
+
+/* greeting */
+
+input[type='text'] {
+    padding: .9rem .5rem 0 0.7rem;
+    margin-top: 1rem;
+    border: none;
+    /* border-bottom: 2px solid var(--color-black); */
+    background-color: transparent;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input[type='text']::placeholder {
+    color: var(--color-black);
+}
+
+input[type='text']:focus {
+    outline: none;
+
+}
+
+input[type='submit'] {
+    padding: .5rem 0.8rem;
+    border: none;
+    /* border-radius: 5px; */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+p#language {
+    float: right;
+}
+
+#passport {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+#passport-form {
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    z-index: 1001;
+    min-width: 60%;
+    min-height: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+#login-form {
+    grid-column: 3/6;
+    grid-row: 5/6;
+    border: none;
+}
+
+#greeting {
+    grid-column: 3/5;
+    grid-row: 7/8;
+    justify-self: flex-start;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-left: 0.7rem;
+
+}
+
+#clearStorage {
+    padding: 0;
+    grid-column: 5/6;
+    grid-row: 7/8;
+    width: 70%;
+    height: 50%;
+    /* justify-self: end; */
+}
+
+
+#mainpp {
+    position: relative;
+    z-index: 1000;
+}
+
+#to-korea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -20%) rotate(-20deg);
+}
+
+#to-canada {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(5%, -50%) rotate(15deg);
+}
+
+
+
+div.button {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+}
+
+div.button>a {
+    padding: 2rem 0;
+    cursor: pointer;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 1%;
+    left: 2%;
+}
+
+/* 
+footer p {
+    padding-top: 5rem;
+} */
+
+.hidden {
+    display: none;
+}

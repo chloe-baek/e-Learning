@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>Group3</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        .finalword {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+        }
+
+        .final-bg {
+            width: 100vw;
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        a {
+            display: inline-block;
+            background-color: var(--color-btn);
+            color: var(--color-black);
+            border: 2px solid var(--color-black);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <span class="finalword"></span>
+        <a href="index.html">Back to Home</a>
+
+        <script>
+            const finalWord = document.querySelector('.finalword');
+            if (localStorage.getItem('username') !== null) {
+                finalWord.innerHTML = `<p>Excellent Work, ${localStorage.getItem('username')}!!! </p>`
+            } else {
+                finalWord.classList.add('hidden');
+            }
+        </script>
+
+
+
+    </main>
+    <img src="images/canadabg.svg" alt="" class="final-bg">
+    <footer>
+        <p>Copyright &copy
+            <script>document.write(new Date().getFullYear()) </script> by Group3. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+
+</html>
